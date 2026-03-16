@@ -1,0 +1,5 @@
+- [ ] Inserir o CNPJ 52.671.137/0001-71 no rodapé
+- [ ] Remover referência de depoimento em Imperatriz
+- [ ] Manter apenas os comentários em itálico
+- [ ] Refinar o visual para maior apelo comercial
+- [ ] Validar o resultado final

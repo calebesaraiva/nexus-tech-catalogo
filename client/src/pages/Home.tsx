@@ -20,14 +20,18 @@ import {
   BarChart3,
   Bot,
   BrainCircuit,
+  Building2,
   Check,
   CircleDollarSign,
   Globe,
   Layers3,
   LineChart,
+  Mail,
+  MapPin,
   MessageCircle,
   MonitorSmartphone,
   MoveRight,
+  Quote,
   Rocket,
   ShieldCheck,
   Sparkles,
@@ -42,6 +46,7 @@ import {
   BarChart,
   CartesianGrid,
   Cell,
+  LabelList,
   Pie,
   PieChart,
   ResponsiveContainer,
@@ -52,6 +57,7 @@ import {
 
 const whatsappLink =
   "https://wa.me/559984027548?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20da%20Nexus%20Tech";
+const email = "comercial@nexustecnologialtda.com.br";
 
 const heroChart = [
   { mes: "Jan", leads: 22 },
@@ -63,8 +69,8 @@ const heroChart = [
 ];
 
 const revenueBars = [
-  { nome: "Antes", valor: 35 },
-  { nome: "Depois", valor: 88 },
+  { nome: "Antes", valor: 37 },
+  { nome: "Depois", valor: 89 },
 ];
 
 const channelMix = [
@@ -137,7 +143,7 @@ const avulsos = [
   ["Landing Page profissional", "R$ 1.500"],
   ["Site institucional", "R$ 2.500"],
   ["Catálogo online", "R$ 1.500"],
-  ["Criação de logomarca", "R$ 600"],
+  ["Criação de logomarca", "R$ 250"],
   ["Identidade visual completa", "R$ 1.200"],
   ["Criação de perfil no Google Maps", "R$ 400"],
   ["Automação de WhatsApp", "R$ 1.200"],
@@ -184,20 +190,47 @@ const testimonials = [
   {
     name: "Carlos Henrique",
     role: "Diretor comercial, empresa de serviços",
+    city: "São Luís, MA",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663444462587/GAZ9ynrWcz76jWsvwgxncj/nexus-client-avatar-1-SYTB9uvyCKQq29kNPxbiy2.webp",
     quote:
       "Em poucas semanas, nossa operação digital passou a gerar muito mais contatos qualificados. A Nexus Tech nos entregou estrutura, posicionamento e clareza comercial.",
   },
   {
     name: "Mariana Lopes",
     role: "Gestora, clínica especializada",
+    city: "São Luís, MA",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663444462587/GAZ9ynrWcz76jWsvwgxncj/nexus-client-avatar-2-YJXqkEEvQVpaCyqoEaZpPZ.webp",
     quote:
       "O site e a automação com WhatsApp melhoraram muito nossa conversão. Hoje temos mais previsibilidade nas campanhas e uma imagem muito mais profissional.",
   },
   {
     name: "Rafael Sousa",
     role: "Sócio, varejo regional",
+    city: "Fortaleza, CE",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663444462587/GAZ9ynrWcz76jWsvwgxncj/nexus-client-avatar-3-FpnyPp363i9rb7zeK8ikm3.webp",
     quote:
       "A sensação é de ter contratado uma empresa de tecnologia muito maior do que estávamos acostumados. O resultado foi aumento real nas vendas e na confiança da marca.",
+  },
+  {
+    name: "Patrícia Gomes",
+    role: "Empresária do setor de estética",
+    city: "São Luís, MA",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663444462587/GAZ9ynrWcz76jWsvwgxncj/nexus-client-avatar-4-o28Dp5urERAPsL2HH5yu8a.webp",
+    quote:
+      "Antes tínhamos presença digital, mas não tínhamos uma estrutura que realmente convertesse. Depois da Nexus Tech, nosso atendimento ficou mais organizado e as vendas aumentaram com muito mais consistência.",
+  },
+  {
+    name: "Eduardo Martins",
+    role: "Diretor de operação comercial",
+    city: "Fortaleza, CE",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663444462587/GAZ9ynrWcz76jWsvwgxncj/nexus-client-avatar-5-aoUNy4fzpdNquXxFqvJCAJ.webp",
+    quote:
+      "O que mais chamou atenção foi a combinação entre visual profissional, estratégia e velocidade de execução. A Nexus Tech nos ajudou a parecer maiores, mais confiáveis e mais preparados para vender.",
   },
 ];
 
@@ -296,8 +329,17 @@ export default function Home() {
                   </span>
                 </h1>
                 <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 lg:text-xl">
-                  Soluções completas de tecnologia, marketing e automação para empresas que querem crescer, vender mais e bater metas.
+                  Soluções completas de tecnologia, marketing e automação para empresas que querem crescer, vender mais e bater metas com uma estrutura que transmite autoridade e acelera o fechamento.
                 </p>
+
+                <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-200">
+                  <div className="rounded-full border border-white/10 bg-white/6 px-4 py-2 backdrop-blur-xl">
+                    Atuação no Maranhão e Ceará
+                  </div>
+                  <div className="rounded-full border border-white/10 bg-white/6 px-4 py-2 backdrop-blur-xl">
+                    Escritórios em São Luís, Imperatriz e Fortaleza
+                  </div>
+                </div>
 
                 <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                   <a href="#servicos">
@@ -445,7 +487,7 @@ export default function Home() {
                 Tecnologia, marketing e inteligência estratégica para acelerar empresas.
               </h2>
               <p className="mt-6 text-base leading-8 text-slate-300">
-                A Nexus Tech é especializada em tecnologia, marketing digital e soluções estratégicas para crescimento empresarial. Nosso papel é transformar empresas tradicionais em negócios digitais altamente lucrativos, com estrutura, posicionamento e performance.
+                A Nexus Tech é especializada em tecnologia, marketing digital e soluções estratégicas para crescimento empresarial. Nosso papel é transformar empresas tradicionais em negócios digitais altamente lucrativos, com estrutura, posicionamento e performance para fechar mais contratos.
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
                 {[
@@ -454,6 +496,7 @@ export default function Home() {
                   "Automatizar processos",
                   "Posicionar sua marca no mercado",
                   "Crescer com estratégias digitais",
+                  "Transmitir autoridade e confiança na decisão de compra",
                 ].map((item) => (
                   <div key={item} className="flex items-start gap-3 rounded-2xl border border-white/8 bg-slate-950/40 p-4">
                     <div className="mt-0.5 rounded-full bg-emerald-400/12 p-1.5 text-emerald-300">
@@ -476,7 +519,7 @@ export default function Home() {
                 {
                   icon: Globe,
                   title: "Presença digital de alto padrão",
-                  text: "Sites, landing pages e ativos pensados para transmitir autoridade e gerar conversão.",
+                  text: "Sites, landing pages e ativos pensados para transmitir autoridade, gerar confiança e converter melhor.",
                 },
                 {
                   icon: MonitorSmartphone,
@@ -553,6 +596,41 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="py-12">
+          <div className="container">
+            <div className="grid gap-6 lg:grid-cols-3">
+              {[
+                {
+                  icon: MapPin,
+                  title: "Atuação regional forte",
+                  text: "Atendemos empresas em todo o Maranhão e Ceará com foco comercial, presença digital e posicionamento estratégico.",
+                },
+                {
+                  icon: Building2,
+                  title: "Escritórios em pontos estratégicos",
+                  text: "Presença em São Luís, Imperatriz e Fortaleza para atender negócios que querem crescer com suporte mais próximo.",
+                },
+                {
+                  icon: Mail,
+                  title: "Contato comercial profissional",
+                  text: `Atendimento direto pelo e-mail ${email} e WhatsApp para orçamentos, suporte e alinhamento comercial.`,
+                },
+              ].map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div key={item.title} className="rounded-[1.8rem] border border-white/10 bg-white/6 p-6 backdrop-blur-2xl">
+                    <div className="mb-5 inline-flex rounded-2xl bg-cyan-400/10 p-3 text-cyan-200">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-display text-xl font-semibold text-white">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-300">{item.text}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         <section id="servicos" className="py-24">
           <div className="container">
             <motion.div
@@ -567,7 +645,7 @@ export default function Home() {
                 Estruturas comerciais digitais desenhadas para vender mais.
               </h2>
               <p className="mt-6 text-base leading-8 text-slate-300">
-                Cada solução foi organizada para unir presença digital, autoridade de marca e facilidade de conversão em canais de venda.
+                Cada solução foi organizada para unir presença digital, autoridade de marca e facilidade de conversão em canais de venda. O objetivo não é apenas ter um site bonito, mas fazer o cliente confiar e entrar em contato.
               </p>
             </motion.div>
 
@@ -669,6 +747,16 @@ export default function Home() {
                       <BarChart3 className="h-5 w-5" />
                       <span className="text-sm font-medium tracking-wide text-slate-300">Comparativo de vendas</span>
                     </div>
+                    <div className="mb-4 grid grid-cols-2 gap-3">
+                      <div className="rounded-2xl border border-white/8 bg-slate-950/40 p-4 text-center">
+                        <div className="text-xs uppercase tracking-[0.22em] text-slate-400">Antes</div>
+                        <div className="mt-2 text-3xl font-bold text-white">37</div>
+                      </div>
+                      <div className="rounded-2xl border border-cyan-300/18 bg-cyan-400/8 p-4 text-center">
+                        <div className="text-xs uppercase tracking-[0.22em] text-cyan-100/70">Depois</div>
+                        <div className="mt-2 text-3xl font-bold text-cyan-200">89</div>
+                      </div>
+                    </div>
                     <div className="h-56">
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={revenueBars}>
@@ -687,6 +775,7 @@ export default function Home() {
                             {revenueBars.map((entry) => (
                               <Cell key={entry.nome} fill={entry.nome === "Depois" ? "#52d4ff" : "#475569"} />
                             ))}
+                            <LabelList dataKey="valor" position="top" fill="#e2e8f0" fontSize={14} />
                           </Bar>
                         </BarChart>
                       </ResponsiveContainer>
@@ -821,6 +910,9 @@ export default function Home() {
               <h2 className="font-display text-3xl font-bold tracking-[-0.03em] text-white sm:text-5xl">
                 Empresas procuram a Nexus Tech para crescer com mais estrutura e confiança.
               </h2>
+              <p className="mt-5 text-base leading-8 text-slate-300">
+                Reforçamos credibilidade, aumentamos a percepção de valor e entregamos uma estrutura digital que faz sua empresa parecer mais sólida, mais preparada e muito mais pronta para vender.
+              </p>
             </div>
             <div className="mt-12 grid gap-6 lg:grid-cols-3">
               {testimonials.map((testimonial, index) => (
@@ -829,19 +921,29 @@ export default function Home() {
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.55, delay: index * 0.08 }}
+                  transition={{ duration: 0.55, delay: index * 0.06 }}
                   className="rounded-[2rem] border border-white/10 bg-white/6 p-7 backdrop-blur-2xl"
                 >
-                  <div className="mb-6 flex items-center gap-3 text-cyan-200">
+                    <div className="mb-5 flex items-center gap-4">
+
+                    <img
+                      src={testimonial.image}
+                      alt={`Cliente ${testimonial.name}`}
+                      className="h-16 w-16 rounded-2xl object-cover ring-1 ring-white/10"
+                    />
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="mt-1 text-sm text-slate-400">{testimonial.role}</div>
+                      <div className="mt-1 text-xs uppercase tracking-[0.2em] text-cyan-200/80">{testimonial.city}</div>
+                    </div>
+                  </div>
+                  <div className="mb-5 flex items-center gap-2 text-cyan-200">
+                    <Quote className="h-4 w-4" />
                     {[...Array(5)].map((_, starIndex) => (
                       <Sparkles key={starIndex} className="h-4 w-4" />
                     ))}
                   </div>
-                  <p className="text-base leading-8 text-slate-200">“{testimonial.quote}”</p>
-                  <div className="mt-8 border-t border-white/8 pt-5">
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="mt-1 text-sm text-slate-400">{testimonial.role}</div>
-                  </div>
+                  <p className="text-base leading-8 text-slate-200 italic">“{testimonial.quote}”</p>
                 </motion.div>
               ))}
             </div>
@@ -890,19 +992,22 @@ export default function Home() {
                     Pronto para transformar sua empresa em uma máquina de vendas digital?
                   </h2>
                   <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300">
-                    Nossa equipe está pronta para criar a estrutura digital que sua empresa precisa para crescer e dominar o mercado.
+                    Nossa equipe está pronta para criar a estrutura digital que sua empresa precisa para crescer, dominar o mercado e chamar muito mais atenção de clientes que já estão procurando por credibilidade e resultado.
                   </p>
                 </div>
                 <div className="rounded-[1.8rem] border border-white/10 bg-white/6 p-6 backdrop-blur-2xl">
                   <div className="text-sm uppercase tracking-[0.25em] text-slate-400">Contato</div>
                   <div className="mt-3 text-2xl font-bold text-white">WhatsApp +55 99 8402-7548</div>
+                  <a href={`mailto:${email}`} className="mt-3 block text-sm text-cyan-200 hover:text-cyan-100">
+                    {email}
+                  </a>
                   <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                     <a href={whatsappLink} target="_blank" rel="noreferrer">
                       <Button className="h-12 rounded-full bg-gradient-to-r from-cyan-400 to-violet-500 px-6 text-slate-950 hover:opacity-95">
                         Falar no WhatsApp
                       </Button>
                     </a>
-                    <a href={whatsappLink} target="_blank" rel="noreferrer">
+                    <a href={`mailto:${email}`}>
                       <Button variant="outline" className="h-12 rounded-full border-white/16 bg-white/6 px-6 text-white hover:bg-white/12">
                         Solicitar orçamento
                       </Button>
@@ -914,6 +1019,26 @@ export default function Home() {
           </div>
         </section>
       </main>
+
+      <footer className="border-t border-white/8 bg-slate-950/60 py-8 backdrop-blur-xl">
+        <div className="container grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
+          <div>
+            <div className="font-display text-xl font-bold text-white">NEXUS TECH SOLUÇÕES EM TECNOLOGIA LTDA</div>
+            <div className="mt-2 text-sm leading-7 text-slate-400">
+              Nome fantasia: nexus tecnologia. Atuação no Maranhão e no Ceará, com escritórios em São Luís, Imperatriz e Fortaleza.
+            </div>
+            <div className="mt-2 text-sm leading-7 text-slate-400">
+              E-mail comercial: {email}
+            </div>
+            <div className="mt-2 text-sm leading-7 text-slate-400">
+              CNPJ: 52.671.137/0001-71.
+            </div>
+          </div>
+          <div className="text-sm text-slate-500">
+            © Nexus Tech. Presença digital, tecnologia e crescimento comercial.
+          </div>
+        </div>
+      </footer>
 
       <a
         href={whatsappLink}
